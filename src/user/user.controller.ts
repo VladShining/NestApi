@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
   Param,
   Post,
   Put,
@@ -33,6 +34,7 @@ export class UserController {
     return parametres;
   }
   @Post()
+  @HttpCode(204)
   addUser() {
     console.log('user ajouteé');
     return 'add';
